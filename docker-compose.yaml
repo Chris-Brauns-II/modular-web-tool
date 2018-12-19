@@ -1,0 +1,24 @@
+version: '3'
+services:
+  api:
+    build: ./modular-web-tool-api
+    command: nodemon node run dev
+    ports:
+      - "5000:5000"
+    volumes: 
+      - ./modular-web-tool-api:/app
+    stdin_open: true
+    tty: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+  frontend:
+    build: ./modular-web-tool-frontend
+    ports:
+      - "8080:8080"
+    volumes: 
+      - ./modular-web-tool-frontend:/app
+    stdin_open: true
+    tty: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+  
