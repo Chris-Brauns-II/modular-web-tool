@@ -1,0 +1,5 @@
+type Card {
+  id: ID!
+  number: Int!
+  face: String!
+}
