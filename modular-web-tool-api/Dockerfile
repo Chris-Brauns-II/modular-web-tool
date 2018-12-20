@@ -7,6 +7,7 @@ RUN npm install -g nodemon
 WORKDIR /app
 
 EXPOSE 5000
+EXPOSE 5001
 
 USER node
 

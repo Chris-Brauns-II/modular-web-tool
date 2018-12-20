@@ -5,6 +5,7 @@ services:
     command: nodemon node run dev
     ports:
       - "5000:5000"
+      - "5001:5001"
     volumes: 
       - .:/app
     stdin_open: true
