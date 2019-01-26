@@ -33,13 +33,13 @@ SubscriptionServer.create({
   subscribe
 }, {
   server,
-  path: '/api/ws'
+  path: '/'
 });
 
-app.listen(PORT, HOST)
-console.log(`Running on http://${HOST}:${PORT}`);
+// app.listen(PORT, HOST)
+// console.log(`Running on http://${HOST}:${PORT}`);
 
-app.listen(PORT_WS, () => {
+server.listen(PORT_WS, () => {
   console.log(`Running WS server on ${HOST}:${PORT_WS}`);
   
 })

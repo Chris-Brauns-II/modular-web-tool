@@ -8,15 +8,27 @@
 </template>
 
 <script>
+import {SubscriptionClient} from 'subscriptions-transport-ws'
+
 export default {
   name: 'hello',
   data () {
-    return {}
+    return {
+      ws: {}
+    }
   },
   computed: {
     text () {
       return this.$store.state.text
     }
+  },
+  created: () => {
+    this.ws = new SubscriptionClient(`ws://localhost:5001/`, {
+      reconnect: true,
+      connectionParams: {
+        // stuff
+      }
+    })
   }
 }
 </script>

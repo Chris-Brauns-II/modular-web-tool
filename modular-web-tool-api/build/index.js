@@ -28,11 +28,11 @@ subscriptions_transport_ws_1.SubscriptionServer.create({
     subscribe: graphql_1.subscribe
 }, {
     server,
-    path: '/api/ws'
+    path: '/'
 });
-app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
-app.listen(PORT_WS, () => {
+// app.listen(PORT, HOST)
+// console.log(`Running on http://${HOST}:${PORT}`);
+server.listen(PORT_WS, () => {
     console.log(`Running WS server on ${HOST}:${PORT_WS}`);
 });
 //# sourceMappingURL=index.js.map
